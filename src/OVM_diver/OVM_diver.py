@@ -8,11 +8,7 @@ def calc_mix():
     O2_fill = int(input("Enter the O2 part of the topoff mix: "))  
     He_fill = int(input("Enter the Helium part of the topoff mix (default = 0): ") or 0 )  
     P_result = int(input("Enter the final pressure: "))  
-    
-    if He_fill is None:
-        He_fill = 0
-    else:
-        He_fill = He_fill
+
 
     O2_result = ( (P_start * O2_start) + ((P_result - P_start) * O2_fill )) / P_result
     O2_result = round((O2_result),1)
